@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Використання оператора SWITCH — Дні тижня</title>
+</head>
+<body>
+<h2>Завдання: Визначення дня тижня за номером</h2>
+<script>
+"use strict";
+
+// Запитуємо користувача
+let dayNumber = parseInt(prompt("Введіть номер дня тижня (1–7):"));
+let dayName;
+
+// Використання SWITCH
+switch(dayNumber) {
+    case 1:
+        dayName = "Понеділок";
+        break;
+    case 2:
+        dayName = "Вівторок";
+        break;
+    case 3:
+        dayName = "Середа";
+        break;
+    case 4:
+        dayName = "Четвер";
+        break;
+    case 5:
+        dayName = "П'ятниця";
+        break;
+    case 6:
+        dayName = "Субота";
+        break;
+    case 7:
+        dayName = "Неділя";
+        break;
+    default:
+        dayName = "Невірний номер дня!";
+}
+
+// Виводимо результат
+document.write("<p>Номер дня: " + dayNumber + "</p>");
+document.write("<p>День тижня: <b>" + dayName + "</b></p>");
+</script>
+
+
+</body>
+</html>

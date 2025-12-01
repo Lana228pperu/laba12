@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Найбільше і найменше число</title>
+</head>
+<body>
+<script>
+"use strict";
+
+alert("Знаходимо найбільше та найменше число серед трьох введених");
+
+// Введення чисел користувачем
+let a = parseFloat(prompt("Введіть перше число", ""));
+let b = parseFloat(prompt("Введіть друге число", ""));
+let c = parseFloat(prompt("Введіть третє число", ""));
+
+// Обчислення найбільшого числа
+let max = a;
+if (b > max) max = b;
+if (c > max) max = c;
+
+// Обчислення найменшого числа
+let min = a;
+if (b < min) min = b;
+if (c < min) min = c;
+
+// Виведення результатів через alert
+alert("Найбільше число: " + max + "\nНайменше число: " + min);
+
+// Додатково: показ на сторінці
+document.write("<p style='text-align:center; font-size:18px;'>Введені числа: " + a + ", " + b + ", " + c + "</p>");
+document.write("<p style='text-align:center; font-size:18px;'>Найбільше число: " + max + "</p>");
+document.write("<p style='text-align:center; font-size:18px;'>Найменше число: " + min + "</p>");
+</script>
+</body>
+</html>

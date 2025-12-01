@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Гра: Вгадай колір</title>
+</head>
+<body>
+<script>
+"use strict";
+
+// Створимо кольори
+const colors = ["Червоний", "Синій", "Зелений", "Жовтий", "Фіолетовий"];
+let secretNumber = Math.floor(Math.random() * colors.length); // число від 0 до 4
+let guess;
+let attempts = 0;
+let play = confirm("Хочеш зіграти у гру 'Вгадай колір'?");
+
+if (play) {
+    let found = false;
+    while (!found) {
+        guess = parseInt(prompt(
+            "Введіть число від 1 до 5, щоб вгадати колір:\n" +
+            "1-Червоний, 2-Синій, 3-Зелений, 4-Жовтий, 5-Фіолетовий"
+        )) - 1; // користувач вводить від 1, а в масиві від 0
+
+        attempts++;
+
+        if (guess === secretNumber) {
+            alert("Ви вгадали! Колір: " + colors[secretNumber] +
+                  "\nКількість спроб: " + attempts);
+            found = true;
+        } else if (guess > secretNumber) {
+            alert("Спробуйте число менше!");
+        } else if (guess < secretNumber) {
+            alert("Спробуйте число більше!");
+        } else {
+            alert("Будь ласка, введіть число від 1 до 5!");
+        }
+    }
+} else {
+    alert("Шкода. Можливо, в інший раз!");
+}
+</script>
+</body>
+</html>

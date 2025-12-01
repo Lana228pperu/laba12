@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Цикли — парні числа</title>
+</head>
+<body>
+<h2>Виведення парних чисел від 1 до N</h2>
+<script>
+"use strict";
+
+let n = parseInt(prompt("Введіть число N для виведення парних чисел:"));
+
+// Цикл FOR
+document.write("<p><b>Цикл FOR:</b> ");
+for (let i = 2; i <= n; i += 2) {
+    document.write(i + " ");
+}
+document.write("</p>");
+
+// Цикл WHILE
+document.write("<p><b>Цикл WHILE:</b> ");
+let j = 2;
+while (j <= n) {
+    document.write(j + " ");
+    j += 2;
+}
+document.write("</p>");
+
+// Цикл DO WHILE
+document.write("<p><b>Цикл DO WHILE:</b> ");
+let k = 2;
+if (n >= 2) {
+    do {
+        document.write(k + " ");
+        k += 2;
+    } while (k <= n);
+}
+document.write("</p>");
+
+</script>
+
+</body>
+</html>

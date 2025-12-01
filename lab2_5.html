@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Використання оператора for...in</title>
+</head>
+<body>
+<h2>Інформація про студента</h2>
+<script>
+"use strict";
+
+// Створюємо об'єкт студента
+let student = {
+    name: "Мілана",
+    surname: "Сахацька",
+    group: "ПП-26",
+    grade: 10
+};
+
+document.write("<p>Властивості студента:</p>");
+for (let key in student) {
+    document.write("<b>" + key + ":</b> " + student[key] + "<br>");
+}
+</script>
+</body>
+</html>
